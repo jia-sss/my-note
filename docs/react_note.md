@@ -44,6 +44,7 @@ module.exports = function(app){
 ## 消息订阅与发布 （组件间通信）
 #### 1.工具库
 pubsubjs
+    npm i pubsub-js
 ```js
 //引入
 import PubSub from 'pubsub-js'
