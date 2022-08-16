@@ -5,6 +5,7 @@ module.exports = {
         sidebar: 'auto',
         nav: [
             { text: 'js', link: '/js_note' },
+            { text: 'js小方法', link: '/js-method' },
             {
                 text: 'react', 
                 items: [
