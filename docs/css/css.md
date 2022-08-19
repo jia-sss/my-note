@@ -31,6 +31,45 @@ $ue-width: 1366;  //设计稿宽度
 }
 
 .test{
-    width: px2vw(100)
+    width: px2vw(100)  //无需单位
+}
+```
+
+## 不同尺寸适配（带css锁）
+```scss
+$ue-width: 800; //设计稿宽度
+$max-width: 800px; //最大宽度
+$min-width: 200px; //最小宽度
+$current-width: clamp($min-width, 100vw, $max-width); //当前宽度
+@function px2vw($px) {
+    @return calc($px * $current-width / $ue-width);
+}
+.test {
+    width: px2vw(400);
+    height: px2vw(200);
+    background-color: aquamarine;
+    color: #000;
+    font-size: px2vw(100);
+}
+```
+```scss
+/** 
+  * @param {Number} $value - 理想尺寸基数，不带任何单位，设计稿对应的元素尺寸值，eg 设计稿元素宽度是500，$value = 500 
+  * @param {Number} $idealViewportWidth - 理想视窗宽度基数，不带单位，设计稿的宽度 
+  * @param {String} $min - 最小视窗宽度 
+  * @param {String} $max - 最大视窗宽度 
+**/ 
+@function scalePixelValue($value, $idealViewportWidth: 1600, $min: 320px, $max: 3480px) { 
+    @return calc( #{$value} * (clamp(#{$min}, 100vw, #{$max}) / #{$idealViewportWidth}) ) 
+}
+```
+js中使用
+```ts
+/** 
+  * @param {Number} value - 元素的理想值基数，对应设计稿上的值 
+  * @param {Number} idealViewportWidth - 理想视窗宽度，对应设计稿宽度 
+**/ 
+const scalePixelValue = (value:number, idealViewportWidth:number = 1600) => { 
+    return value * (window.innerWidth / idealViewportWidth) 
 }
 ```
