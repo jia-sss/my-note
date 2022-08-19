@@ -6,10 +6,15 @@ export default defineConfig({
 	themeConfig: {
 		siteTitle: "我的笔记",
 		sidebar: {
+            "/css/": sidebarCss(),
 			"/js/": sidebarJs(),
-			"/react": sidebarReact(),
+			"/react/": sidebarReact(),
 		},
 		nav: [
+			{
+				text: "css",
+				link: "/css/css",
+			},
 			{
 				text: "js",
 				link: "/js/js-method/date",
@@ -66,4 +71,14 @@ function sidebarReact() {
 			items: [{ text: "React扩展", link: "/react/react_kz" }],
 		},
 	];
+}
+
+function sidebarCss() {
+    return [
+        {
+            text: "Css",
+			collapsible: true,
+			items: [{ text: "vw滚动条问题", link: "/css/css" }],
+        }
+    ]
 }
