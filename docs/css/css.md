@@ -27,7 +27,7 @@
 ```scss
 $ue-width: 1366;  //设计稿宽度
 @function px2vw($px) {
-    @return calc($px / $ue-width * (100vw - var(--scrollbar-width)));
+    @return calc($px * ((100vw - var(--scrollbar-width)) / $ue-width));
 }
 
 .test{
