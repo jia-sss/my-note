@@ -1,5 +1,6 @@
 {
 	"name": "my_note",
+	"license": "MIT",
 	"version": "1.0.0",
 	"description": "笔记",
 	"scripts": {
@@ -8,7 +9,7 @@
 		"docs:serve": "vitepress serve docs"
 	},
 	"devDependencies": {
-		"vitepress": "1.0.0-alpha.5",
+		"vitepress": "1.0.0-alpha.10",
 		"vue": "^3.2.37"
 	},
 	"pnpm": {
@@ -20,5 +21,8 @@
 				"react-dom"
 			]
 		}
+	},
+	"dependencies": {
+		"algoliasearch": "^4.14.2"
 	}
 }
