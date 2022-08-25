@@ -25,9 +25,9 @@ export default defineConfig({
 			},
 		],
 		algolia: {
-			appId: "V26XA5K8WI",
-			apiKey: "c26f1d6aa00c1ff426c46859774e9d9c",
-			indexName: "mynote",
+			appId: "83BCYSE4G8",
+			apiKey: "6f5836dabc9b0e62955fc9f351e3d805",
+			indexName: "itsme",
 		},
 	},
 });
