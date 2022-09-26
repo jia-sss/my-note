@@ -6,9 +6,10 @@ export default defineConfig({
 	themeConfig: {
 		siteTitle: "我的笔记",
 		sidebar: {
-            "/css/": sidebarCss(),
+			"/css/": sidebarCss(),
 			"/js/": sidebarJs(),
 			"/react/": sidebarReact(),
+			"/css_effect/": sidebar_css_effect(),
 		},
 		nav: [
 			{
@@ -22,6 +23,10 @@ export default defineConfig({
 			{
 				text: "react",
 				link: "/react/react_note",
+			},
+			{
+				text: "css效果",
+				link: "/css_effect/shake",
 			},
 		],
 		algolia: {
@@ -74,11 +79,20 @@ function sidebarReact() {
 }
 
 function sidebarCss() {
-    return [
-        {
-            text: "Css",
+	return [
+		{
+			text: "Css",
 			collapsible: true,
 			items: [{ text: "vw滚动条问题", link: "/css/css" }],
-        }
-    ]
+		},
+	];
+}
+function sidebar_css_effect() {
+	return [
+		{
+			text: "css效果",
+			collapsible: true,
+			items: [{ text: "元素左右抖动效果", link: "/css_effect/shake" }],
+		},
+	];
 }
