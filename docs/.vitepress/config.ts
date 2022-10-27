@@ -14,7 +14,7 @@ export default defineConfig({
 		nav: [
 			{
 				text: "css",
-				link: "/css/css",
+				link: "/css/css_vw",
 			},
 			{
 				text: "js",
@@ -83,7 +83,7 @@ function sidebarCss() {
 		{
 			text: "Css",
 			collapsible: true,
-			items: [{ text: "vw滚动条问题", link: "/css/css" }],
+			items: [{ text: "css移动端适配", link: "/css/css_vw" }],
 		},
 	];
 }

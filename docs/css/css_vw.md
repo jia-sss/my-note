@@ -1,4 +1,4 @@
-# vw在pc端包含滚动条问题
+## vw在pc端包含滚动条问题
 
 在pc端，不给body设 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow#%E5%80%BC" target="_blank">overflow:overlay</a> 时，滚动条会占有宽度，而100vw会包含滚动条，就会导致 100%width != 100vw  
 解决：  
@@ -73,3 +73,15 @@ const scalePixelValue = (value:number, idealViewportWidth:number = 1600) => {
     return value * (window.innerWidth / idealViewportWidth) 
 }
 ```
+
+
+## vw+rem适配方案
+
+如果效果图是 375px 的，html 的 style 属性的 font-size 设置为 26.666666vw，css 中 20px 改写为 0.2rem 即可
+
+| 设计图大小（单位 px） | html 的 font-size（单位 vw） |           备注              |
+|        :-:         |           :-:              |            :-:              |
+|        375         |        26.666666           | 效果图 20px，代码应该写 0.2rem |
+|        750         |        13.333333           | 效果图 20px，代码应该写 0.2rem |
+|        320         |          31.25             | 效果图 20px，代码应该写 0.2rem |
+|        640         |         15.625             | 效果图 20px，代码应该写 0.2rem |
