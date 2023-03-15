@@ -47,3 +47,11 @@ fahrenheitToCelsius(32);    // 0
 ```js
 const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object;
 ```
+
+## 6. 生成随机16进制
+```js
+const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
+
+console.log(randomHex());
+// Result: #92b008
+```
