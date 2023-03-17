@@ -28,6 +28,10 @@ export default defineConfig({
 				text: "css效果",
 				link: "/css_effect/shake",
 			},
+			{
+				text: "int",
+				link: "/int",
+			},
 		],
 		algolia: {
 			appId: "83BCYSE4G8",
