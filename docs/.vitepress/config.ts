@@ -10,6 +10,7 @@ export default defineConfig({
 			"/js/": sidebarJs(),
 			"/react/": sidebarReact(),
 			"/css_effect/": sidebar_css_effect(),
+            "/rust/": rustFn(),
 		},
 		nav: [
 			{
@@ -29,8 +30,12 @@ export default defineConfig({
 				link: "/css_effect/shake",
 			},
 			{
-				text: "int",
-				link: "/int",
+				text: "计算机基础",
+				link: "/basics",
+			},
+			{
+				text: "rust",
+				link: "/rust/ownership",
 			},
 		],
 		algolia: {
@@ -97,6 +102,16 @@ function sidebar_css_effect() {
 			text: "css效果",
 			collapsible: true,
 			items: [{ text: "元素左右抖动效果", link: "/css_effect/shake" }],
+		},
+	];
+}
+
+function rustFn(){
+    return [
+		{
+			text: "rust",
+			collapsible: true,
+			items: [{ text: "所有权", link: "/rust/ownership" }],
 		},
 	];
 }
