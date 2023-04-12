@@ -14,8 +14,8 @@ hero:
     - theme: brand
       text: react
       link: /react/react_note
-    # - theme: alt
-    #   text: View on GitHub
-    #   link: https://github.com/vuejs/vitepress
+    - theme: brand
+      text: rust
+      link: /rust/ownership
 
 ---

@@ -9,7 +9,6 @@ export default defineConfig({
 			"/css/": sidebarCss(),
 			"/js/": sidebarJs(),
 			"/react/": sidebarReact(),
-			"/css_effect/": sidebar_css_effect(),
             "/rust/": rustFn(),
 		},
 		nav: [
@@ -24,10 +23,6 @@ export default defineConfig({
 			{
 				text: "react",
 				link: "/react/react_note",
-			},
-			{
-				text: "css效果",
-				link: "/css_effect/shake",
 			},
 			{
 				text: "计算机基础",
@@ -94,14 +89,10 @@ function sidebarCss() {
 			collapsible: true,
 			items: [{ text: "css移动端适配", link: "/css/css_vw" }],
 		},
-	];
-}
-function sidebar_css_effect() {
-	return [
-		{
+        {
 			text: "css效果",
 			collapsible: true,
-			items: [{ text: "元素左右抖动效果", link: "/css_effect/shake" }],
+			items: [{ text: "元素左右抖动效果", link: "/css/shake" }],
 		},
 	];
 }
