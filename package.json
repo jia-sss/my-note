@@ -9,7 +9,7 @@
 		"docs:serve": "vitepress serve docs"
 	},
 	"devDependencies": {
-		"vitepress": "1.0.0-beta.3",
+		"vitepress": "1.0.0-rc.4",
 		"vue": "^3.3.4"
 	},
 	"pnpm": {
@@ -23,6 +23,6 @@
 		}
 	},
 	"dependencies": {
-		"algoliasearch": "^4.18.0"
+		"algoliasearch": "^4.19.1"
 	}
 }
