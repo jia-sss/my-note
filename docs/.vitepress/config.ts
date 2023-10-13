@@ -33,11 +33,14 @@ export default defineConfig({
 				link: "/rust/ownership",
 			},
 		],
-		algolia: {
-			appId: "83BCYSE4G8",
-			apiKey: "6f5836dabc9b0e62955fc9f351e3d805",
-			indexName: "itsme",
-		},
+		// algolia: {
+		// 	appId: "83BCYSE4G8",
+		// 	apiKey: "6f5836dabc9b0e62955fc9f351e3d805",
+		// 	indexName: "itsme",
+		// },
+        search:{
+            provider: 'local'
+        }
 	},
 });
 
