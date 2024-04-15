@@ -36,4 +36,6 @@ truncateString('Hi, I should be truncated because I am too loooong!', 36)   // '
 该方法用于去除字符串中的HTML元素：
 ````js
 const stripHtml = html => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
+
+stripHtml("<div>123123</div>"); // 123123
 ````

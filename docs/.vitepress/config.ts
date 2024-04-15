@@ -9,7 +9,7 @@ export default defineConfig({
 			"/css/": sidebarCss(),
 			"/js/": sidebarJs(),
 			"/react/": sidebarReact(),
-            "/rust/": rustFn(),
+			"/rust/": rustFn(),
 		},
 		nav: [
 			{
@@ -38,9 +38,9 @@ export default defineConfig({
 		// 	apiKey: "6f5836dabc9b0e62955fc9f351e3d805",
 		// 	indexName: "itsme",
 		// },
-        search:{
-            provider: 'local'
-        }
+		search: {
+			provider: "local",
+		},
 	},
 });
 
@@ -61,10 +61,11 @@ function sidebarJs() {
 				{ text: "一、日期处理", link: "/js/js-method/date" },
 				{ text: "二、字符串处理", link: "/js/js-method/string" },
 				{ text: "三、数组处理", link: "/js/js-method/array" },
-				{ text: "四、数字操作", link: "/js/js-method/number" },
-				{ text: "五、颜色操作", link: "/js/js-method/color" },
-				{ text: "六、浏览器操作", link: "/js/js-method/browser" },
-				{ text: "七、其他操作", link: "/js/js-method/other" },
+				{ text: "四、对象处理", link: "/js/js-method/object" },
+				{ text: "五、数字操作", link: "/js/js-method/number" },
+				{ text: "六、颜色操作", link: "/js/js-method/color" },
+				{ text: "七、浏览器操作", link: "/js/js-method/browser" },
+				{ text: "八、其他操作", link: "/js/js-method/other" },
 			],
 		},
 	];
@@ -92,7 +93,7 @@ function sidebarCss() {
 			collapsible: true,
 			items: [{ text: "css移动端适配", link: "/css/css_vw" }],
 		},
-        {
+		{
 			text: "css效果",
 			collapsible: true,
 			items: [{ text: "元素左右抖动效果", link: "/css/shake" }],
@@ -100,8 +101,8 @@ function sidebarCss() {
 	];
 }
 
-function rustFn(){
-    return [
+function rustFn() {
+	return [
 		{
 			text: "rust",
 			collapsible: true,

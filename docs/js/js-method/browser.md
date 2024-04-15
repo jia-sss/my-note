@@ -97,3 +97,15 @@ return JSON.stringify(URL);
 getParameters(window.location)
 // Result: { search : "easy", page : 3 }
 ```
+
+## 14. 解析url中的参数
+```js
+const parseQuery = (url) => {
+    q = {};
+    url.replace(/([^?&=]+)=([^&]+)/g, (_,k,v) => (q[k] = v));
+    return q;
+}
+
+parseQuery("http://a.com/?a=1&b=2"); // {a:1,b:2}
+parseQuery("a=1&b=2"); // {a:1,b:2}
+```

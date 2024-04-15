@@ -15,3 +15,10 @@ const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).pa
 
 randomHex();
 ````
+
+## 3. 将rgb颜色灰度化（基于光感加权平均）
+````js
+const gray = (r,g,b) => 0.2126 * r + 0.7152 * g + 0.0722 * b;
+
+gray(50,100,150);  // 92.98
+````

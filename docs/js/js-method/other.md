@@ -42,13 +42,7 @@ fahrenheitToCelsius(59);    // 15
 fahrenheitToCelsius(32);    // 0
 ```
 
-## 5. 检测对象是否为空
-该方法用于检测一个JavaScript对象是否为空：
-```js
-const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object;
-```
-
-## 6. 生成随机16进制
+## 5. 生成随机16进制
 ```js
 const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
 
