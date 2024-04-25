@@ -98,6 +98,11 @@ function sidebarCss() {
 			collapsible: true,
 			items: [{ text: "元素左右抖动效果", link: "/css/shake" }],
 		},
+		{
+			text: "样式重置",
+			collapsible: true,
+			items: [{ text: "样式重置", link: "/css/style_reset" }],
+		},
 	];
 }
 
