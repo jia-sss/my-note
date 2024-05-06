@@ -31,3 +31,11 @@ const round = (n, d) => Number(Math.round(n + "e" + d) + "e-" + d)
 round(1.005, 2) //1.01
 round(1.555, 2) //1.56
 ````
+
+## 5. 数字千分位分隔符
+```js
+let n = '10000000000';
+// let s = n.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+let s = n.replace(/\B(?=(\d{3})+$)/g, ',');
+console.log(s);
+```
