@@ -39,3 +39,25 @@ let n = '10000000000';
 let s = n.replace(/\B(?=(\d{3})+$)/g, ',');
 console.log(s);
 ```
+
+## 6. 大整数求和
+```js
+let a = '13131231597528470528347590209342';
+let b = '878752304752034785902750';
+
+function sum(a,b){
+    let len = Math.max(a.length, b.length);
+    a = a.padStart(len, '0');
+    b = b.padStart(len, '0');
+    let carry = 0;
+    let result = '';
+    for(let i = len - 1; i >= 0; i--){
+        let sum = parseInt(a[i]) + parseInt(b[i]) + carry;
+        carry = Math.floor(sum / 10);
+        result = (sum % 10) + result;
+    }
+    return carry ? carry + result : result;
+}
+
+console.log(sum(a,b));
+```
