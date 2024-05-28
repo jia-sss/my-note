@@ -10,6 +10,7 @@ export default defineConfig({
 			"/js/": sidebarJs(),
 			"/react/": sidebarReact(),
 			"/rust/": rustFn(),
+            "other": otherFn(),
 		},
 		nav: [
 			{
@@ -31,6 +32,10 @@ export default defineConfig({
 			{
 				text: "rust",
 				link: "/rust/ownership",
+			},
+			{
+				text: "其他",
+				link: "/other/tmux",
 			},
 		],
 		// algolia: {
@@ -114,4 +119,14 @@ function rustFn() {
 			items: [{ text: "所有权", link: "/rust/ownership" }],
 		},
 	];
+}
+
+function otherFn() {
+    return [
+        {
+            text: "其他",
+            collapsible: true,
+            items: [{ text: "Tmux", link: "/other/tmux" }],
+        },
+    ];
 }
