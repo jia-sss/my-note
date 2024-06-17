@@ -67,3 +67,13 @@
 	});
 </script>
 ```
+
+## 多行文本省略号
+```css
+overflow: hidden;
+display: -webkit-box;
+text-overflow: ellipsis;
+/* autoprefixer: ignore next */
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+```
